@@ -1,0 +1,46 @@
+body {
+  background-color: #0e0b07;
+  font-family: 'Crimson Pro', serif;
+}
+.grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+}
+.forge-title { font-family: 'Cinzel', serif; }
+.nav-active { border-bottom: 2px solid #d97706; color: #fbbf24; }
+.badge-combat    { background: #7f1d1d; color: #fca5a5; }
+.badge-tech      { background: #1e3a5f; color: #93c5fd; }
+.badge-materials { background: #1c2b1a; color: #86efac; }
+.card-glow:hover { box-shadow: 0 0 24px var(--glow-color, rgba(217, 119, 6, 0.35)); }
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: #1c1917;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.5em;
+  height: 1.5em;
+  border: 1px solid #57534e;
+  border-radius: 0.15em;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.8em;
+  height: 0.8em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #d97706;
+  background-color: #d97706;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+input[type="checkbox"]:checked { border-color: #d97706; background-color: #451a03; }
+input[type="checkbox"]:checked::before { transform: scale(1); }
+
+.ready-glow {
+  box-shadow: 0 0 30px rgba(217, 119, 6, 0.6);
+  border-color: #d97706 !important;
+}
